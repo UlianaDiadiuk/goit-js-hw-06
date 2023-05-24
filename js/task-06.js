@@ -9,4 +9,9 @@ input.addEventListener("blur", () =>  {
     input.classList.add("invalid");
   }
 });
-                     
+         
+input.addEventListener("focus", () => {
+  input.classList.remove("invalid");
+    input.classList.remove("valid");
+}
+);

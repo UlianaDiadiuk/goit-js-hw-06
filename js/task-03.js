@@ -13,13 +13,14 @@ const images = [
   },
 ];
 
-
-const gallery = document.querySelector(".gallery");
+const gallery = document.querySelector('.gallery');
 const finalGallery = images
-.flatMap((image) => `<li><img src="${image.url}" alt="${image.alt}" style="object-fit: cover; max-width: 100%;"/></li>`)
-.join("");
-gallery.insertAdjacentHTML("afterbegin", finalGallery);
-gallery.style.display = "flex"; 
-gallery.style.flexDirection = "column";
-gallery.style.justifyContent = "center";
-console.log(gallery);
+  .flatMap(
+    image =>
+      `<li><img src="${image.url}" alt="${image.alt}" style="object-fit: cover; max-width: 100%;"/></li>`
+  )
+  .join('');
+gallery.insertAdjacentHTML('afterbegin', finalGallery);
+gallery.style.display = 'flex';
+gallery.style.flexDirection = 'column';
+gallery.style.justifyContent = 'center';

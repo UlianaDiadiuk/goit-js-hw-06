@@ -5,6 +5,7 @@ const ingredientsList = ingredients.map(ingredient => {
   const createLi = document.createElement('li');
   createLi.classList.add('item');
   createLi.textContent = ingredient;
-  ingredientsUl.appendChild(createLi);
   return createLi;
 });
+
+ingredientsUl.append(...ingredientsList);
